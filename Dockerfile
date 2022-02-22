@@ -16,7 +16,7 @@ RUN pip install -e git+https://github.com/Digital-Pathology/ModelManager.git@mai
 
 # Restoring conda environment from environment.yml
 RUN apt update \
-    # && apt upgrade -y \
+    && apt upgrade -y \
     && apt install -y wget python3-opencv libvips42 \
     && wget https://github.com/Digital-Pathology/dev-container/blob/main/environment.yml -P /tmp
     # && conda env update --file /tmp/environment.yml
