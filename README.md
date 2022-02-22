@@ -4,22 +4,18 @@
    1. Docker
    2. AWS Command-Line Interface (AWS CLI)
    3. VS Code
-2. Set AWS Credentials
-   1. `aws configure` - this will prompt you and you'll respond with the corresponding information you can find using the upcoming instructions
+2. Login into AWS and ECR
+   1. `lin` - anywhere from the terminal in the dev-container
    2. Open up the AWS SSO that you use to sign in >> AWS Account >> Command line or programmatic access >> Option 3
    3. The region should be set to `us-east-1`
    4. The format should be set to `json`
-3. Set AWS Session Token
-   1. `aws configure set aws_session_token <token>`'
-   2. Check instruction 2.2 for session token
-4. Log into your AWS account via Docker so Docker can push to AWS
-   1. `aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker`
-5. Lag into your AWS account so Docker can pull the base image provided by AWS
-   1. `aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 763104351884.dkr.ecr.us-east-1.amazonaws.com/pytorch-training:1.9.1-gpu-py38-cu111-ubuntu20.04`
-6. Finally build to the container host
-   1. `docker build . -t 432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:latest`
+   5. Check instruction 2.2 for session token
+3. Copy code
+   1. `copy <absolute path to your code>`
+4. Build
+   1. `build`
 
 ## Push Instructions
 
 1. Push your image to ECR
-   1. `docker push 432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:latest`
+   1. `push`

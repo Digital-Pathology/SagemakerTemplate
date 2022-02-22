@@ -8,5 +8,7 @@ elif [[ ! -d "/workspaces/dev-container" ]]; then
     echo "This script should only be used from within the dev-container."
 else
     rm -rf /workspaces/dev-container/SagemakerTemplate/code
-    ln -s "$1" /workspaces/dev-container/SagemakerTemplate/code
+    echo "removed"
+    cp -r "$1" /workspaces/dev-container/SagemakerTemplate/code
+    echo "copied"
 fi
