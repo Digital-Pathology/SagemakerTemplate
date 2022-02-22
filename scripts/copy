@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "No path provided. Usage: copy /path/to/code"
+elif [[ ! -d "$1" ]]; then
+    echo "Path not a directory. Usage: copy /path/to/code"
+elif [[ ! -d "/workspaces/dev-container" ]]; then
+    echo "This script should only be used from within the dev-container."
+else
+    rm -rf /workspaces/dev-container/SagemakerTemplate/code
+    ln -s "$1" /workspaces/dev-container/SagemakerTemplate/code
+fi
