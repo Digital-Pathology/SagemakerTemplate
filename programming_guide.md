@@ -57,3 +57,7 @@ args = vars(parser.parse_args())
 After training the algorithm should save the model in "/opt/ml/model/". 
 
 If any errors occur, write a log file in "/opt/ml/output/" and the error will be returned as FailureReason in the training job.
+
+## 4. Naming your script
+
+The algorithm script should be named as run.py and be in the topmost level of the directory that you copy in the next few steps.
