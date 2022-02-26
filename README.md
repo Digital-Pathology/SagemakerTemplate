@@ -1,3 +1,7 @@
+# Pre-requisites
+
+Before training your algorithm on Sagemaker platform, it is important to make sure it is set up properly. Please refer to programming_guide.md in this repository for instructions. 
+
 # SagemakerTemplate
 
 1. Install Requirements (will be most likely taken care of by the dev-container)
