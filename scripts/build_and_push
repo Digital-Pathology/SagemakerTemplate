@@ -7,4 +7,6 @@ elif [ -z "$1" ]; then
     echo "Please provide a unique identifier for the image."
 else
     docker build /workspaces/dev-container/SagemakerTemplate -t "432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:$1"
+
+    docker push "432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:$1"
 fi

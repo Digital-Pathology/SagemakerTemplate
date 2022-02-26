@@ -12,10 +12,17 @@
    5. Check instruction 2.2 for session token
 3. Copy code
    1. `copy <absolute path to your code>`
-4. Build
-   1. `build`
+4. Build and push
+   1. `build_and_push <unique identifier for your image>`
+5. Alternatively, you can build and push your image to ECR in different steps
+   1. `build <unique identifier for your image>`
+   2. `push <unique identifier for your image used in step 5.1>`
 
-## Push Instructions
+# Next Steps
 
-1. Push your image to ECR
-   1. `push`
+1. Clone the SagemakerNotebook repo into your Sagemaker instance
+2. Follow the instructions in the README
+
+# Troubleshooting
+
+If you run into any issues, feel free to reach out to Ritik. 
