@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ ! -d "/workspaces/dev-container" ]]; then
+    echo "This script should only be used from within the dev-container."
+elif [ -z "$1" ]; then
+    echo "Please provide a unique identifier for the image."
+else
+    docker pull "432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:$1"
+fi
