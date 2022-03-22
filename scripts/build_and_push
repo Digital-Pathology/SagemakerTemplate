@@ -6,7 +6,7 @@ if [[ ! -d "/workspaces/dev-container" ]]; then
 elif [ -z "$1" ]; then
     echo "Please provide a unique identifier for the image."
 else
-    docker build /workspaces/dev-container/SagemakerTemplate -t "432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:$1"
+    docker build /workspaces/dev-container/SagemakerTemplate -t "432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:$1" --build-arg CACHE_DATE=$(date +%Y-%m-%d:%H:%M:%S)
 
     docker push "432722299252.dkr.ecr.us-east-1.amazonaws.com/sagemaker:$1"
 fi

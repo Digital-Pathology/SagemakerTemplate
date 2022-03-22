@@ -1,0 +1,12 @@
+opencv-python
+numpy
+matplotlib
+matplotlib-inline
+boto3
+torch
+torchvision
+numpy
+pyvips
+slideio
+albumentations
+scikit-learn
