@@ -19,7 +19,7 @@ RUN apt update \
 
 # Install conda and pip packages
 RUN conda install -c conda-forge pyvips albumentations
-RUN pip install slideio opencv-python tqdm
+RUN pip install slideio opencv-python tqdm tables
 
 COPY ./code /opt/ml/code
 
