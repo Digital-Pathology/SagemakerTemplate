@@ -14,9 +14,7 @@ RUN apt update \
 # Install conda and pip packages
 RUN conda install -c anaconda pytables
 RUN conda install -c conda-forge pyvips albumentations
-RUN pip install slideio opencv-python tqdm tables
-<<<<<<< HEAD
-=======
+RUN pip install slideio opencv-python tqdm
 
 COPY ./requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt
@@ -28,7 +26,6 @@ RUN pip install -e git+https://github.com/Digital-Pathology/Filtration.git@main#
 RUN pip install -e git+https://github.com/Digital-Pathology/UnifiedImageReader.git@main#egg=unified_image_reader
 RUN pip install -e git+https://github.com/Digital-Pathology/CustomDataset.git@main#egg=custom_dataset
 RUN pip install -e git+https://github.com/Digital-Pathology/ModelManager.git@main#egg=model_manager
->>>>>>> 48dd7d1 (made Dockerfile wayyy better)
 
 COPY ./code /opt/ml/code
 
