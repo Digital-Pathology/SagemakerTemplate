@@ -5,6 +5,7 @@ ENV PATH="/opt/ml/code:${PATH}"
 
 # Directory where the code is stored
 ENV SAGEMAKER_SUBMIT_DIRECTORY /opt/ml/code
+ENV AWS_DEFAULT_REGION us-east-1
 
 # Install C libraries
 RUN apt update \
