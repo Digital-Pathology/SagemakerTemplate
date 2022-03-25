@@ -17,8 +17,12 @@ Before training your algorithm on Sagemaker platform, it is important to make su
 3. Copy code
    1. `copy <absolute path to your code>`
 4. Build and push
+
+   **Note:- If an already built image exists in the ECR, you can speed up this step by running** `pull <unique identifier for your image>` **first.**
    1. `build_and_push <unique identifier for your image>`
 5. Alternatively, you can build and push your image to ECR in different steps
+
+   **Note:- If an already built image exists in the ECR, you can speed up this step by running** *`pull <unique identifier for your image>`* **first.**
    1. `build <unique identifier for your image>`
    2. `push <unique identifier for your image used in step 5.1>`
 

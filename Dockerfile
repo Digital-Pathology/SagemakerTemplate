@@ -10,12 +10,14 @@ ENV AWS_DEFAULT_REGION us-east-1
 # Install C libraries
 RUN apt update \
     && apt upgrade -y \
-    && apt install -y python3-opencv libvips42
+    && apt install -y python3-opencv
 
 # Install conda and pip packages
-RUN conda install -c anaconda pytables
-RUN conda install -c conda-forge pyvips albumentations
-RUN pip install slideio opencv-python tqdm
+RUN conda config --add channels conda-forge
+RUN conda config --add channels anaconda
+RUN conda install pytables
+RUN conda install pyvips
+RUN pip install slideio opencv-python tqdm albumentations
 
 COPY ./requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt
