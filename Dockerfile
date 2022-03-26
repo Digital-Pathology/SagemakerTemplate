@@ -29,6 +29,7 @@ RUN pip install -e git+https://github.com/Digital-Pathology/Filtration.git@main#
 RUN pip install -e git+https://github.com/Digital-Pathology/UnifiedImageReader.git@main#egg=unified_image_reader
 RUN pip install -e git+https://github.com/Digital-Pathology/CustomDataset.git@main#egg=custom_dataset
 RUN pip install -e git+https://github.com/Digital-Pathology/ModelManager.git@main#egg=model_manager
+RUN pip install -e git+https://github.com/Digital-Pathology/AWS-Utils.git@main#egg=aws_utils
 
 COPY ./code /opt/ml/code
 

@@ -3,6 +3,7 @@ numpy
 matplotlib
 matplotlib-inline
 boto3
+sagemaker
 torch
 torchvision
 numpy
