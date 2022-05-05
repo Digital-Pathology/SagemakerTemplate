@@ -17,7 +17,7 @@ RUN conda config --add channels conda-forge
 RUN conda config --add channels anaconda
 RUN conda install pytables
 RUN conda install pyvips
-RUN pip install slideio opencv-python tqdm albumentations
+RUN pip install slideio opencv-python tqdm albumentations tensorboard
 
 COPY ./requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt
