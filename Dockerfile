@@ -30,6 +30,7 @@ RUN pip install -e git+https://github.com/Digital-Pathology/UnifiedImageReader.g
 RUN pip install -e git+https://github.com/Digital-Pathology/CustomDataset.git@main#egg=custom_dataset
 RUN pip install -e git+https://github.com/Digital-Pathology/ModelManager.git@main#egg=model_manager
 RUN pip install -e git+https://github.com/Digital-Pathology/AWS-Utils.git@main#egg=aws_utils
+RUN pip install -e git+https://github.com/Digital-Pathology/WebApp.git@main#egg=model_manager_for_web_app\&subdirectory=ModelManagerForWebApp
 
 COPY ./code /opt/ml/code
 
