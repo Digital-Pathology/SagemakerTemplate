@@ -11,3 +11,6 @@ pyvips
 slideio
 albumentations
 scikit-learn
+pycocotools
+pycm
+histolab
