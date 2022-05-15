@@ -4,8 +4,8 @@ matplotlib
 matplotlib-inline
 boto3
 sagemaker
-torch
-torchvision
+torch==1.7
+torchvision==0.8
 numpy
 pyvips
 slideio
@@ -14,3 +14,4 @@ scikit-learn
 pycocotools
 pycm
 histolab
+timm==0.3.2
